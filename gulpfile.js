@@ -26,6 +26,12 @@ function style(){
     .pipe(browserSync.stream());
 }
 
+function js(){
+    return gulp.src('./src/js/**/*.js')
+    .pipe(gulp.dest('./build/js'))
+    .pipe(browserSync.stream());
+}
+
 function watch(){
     browserSync.init({
         server: {
@@ -34,7 +40,7 @@ function watch(){
     });
     gulp.watch('./src/scss/**/*.scss', style);
     gulp.watch('./src/*html', copyHtml).on('change', browserSync.reload);
-    gulp.watch('./src/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch('./src/js/**/*.js', js).on('change', browserSync.reload);
     gulp.watch('./src/img/**/*', copyImages).on('change', browserSync.reload);
 }
 
@@ -43,5 +49,5 @@ exports.copyImages = copyImages;
 exports.style = style;
 
 
-exports.build = parallel(copyHtml, copyImages, style);
+exports.build = parallel(copyHtml, copyImages, style, js);
 exports.watch = watch; 
