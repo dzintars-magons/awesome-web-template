@@ -1,0 +1,16 @@
+:root {
+    font-size: 62.5%; /* (62.5/100) * 16px = 10px */
+  }
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  *{
+      margin: 0; 
+      padding: 0;
+  }
+  [class$="button"], [class$="btn"] {
+      display: inline-block;
+  }

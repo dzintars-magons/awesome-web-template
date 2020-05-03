@@ -1,0 +1,35 @@
+@mixin desktop-small {
+    @media (max-width: #{$desktop-small}) {
+        @content; 
+   }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content; 
+   }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content; 
+   }
+}
+
+@mixin mq ($size) {
+    @media (max-width: $size) {
+        @content; 
+    }
+}
+
+@mixin mq-height ($size) {
+    @media (max-height: $size) {
+        @content; 
+    }
+}
+
+@mixin flex-center {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}

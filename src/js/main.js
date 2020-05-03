@@ -1,6 +1,4 @@
 'use strict';
 
-function ilmarinsh(a,b) {
-    return a + b;
-}
+console.log ("Hello World!");
 
