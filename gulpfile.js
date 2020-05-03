@@ -7,6 +7,7 @@ const terser = require('gulp-terser');
 const {parallel} = require('gulp');
 
 const jsPath = './src/js/**/*.js';
+const scssPath = './src/scss/**/*.scss';
 
 function copyHtml(){
     return gulp.src('src/*.html').pipe(gulp.dest('build'));
@@ -20,13 +21,16 @@ function copyImages(){
 
 //compile scss into css
 function style(){
-    //1. where is my scss file 
-    return gulp.src('./src/scss/**/*.scss')
-    //2. pass that file through sasss compiler
-    .pipe(sass().on('error', sass.logError))
-    //3. where do I save the compiled css?
+    
+    return gulp.src(scssPath)
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+        includePaths: scssPath,
+        outputStyle: 'compressed'
+    })
+    .on('error', sass.logError))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build/css')) 
-    //4. stream changes to all browsers
     .pipe(browserSync.stream());
 }
 
