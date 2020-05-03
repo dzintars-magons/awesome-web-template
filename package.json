@@ -1,21 +1,14 @@
 {
-  "name": "test-project",
+  "name": "website",
   "version": "1.0.0",
-  "description": "just for test",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dzintars-magons/test-project.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dzintars-magons/test-project/issues"
-  },
-  "homepage": "https://github.com/dzintars-magons/test-project#readme",
+
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
