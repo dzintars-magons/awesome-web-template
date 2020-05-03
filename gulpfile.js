@@ -1,8 +1,12 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync').create();
+const sourcemaps = require('gulp-sourcemaps');
+const concat = require('gulp-concat');
+const terser = require('gulp-terser');
 const {parallel} = require('gulp');
 
+const jsPath = './src/js/**/*.js';
 
 function copyHtml(){
     return gulp.src('src/*.html').pipe(gulp.dest('build'));
@@ -27,7 +31,11 @@ function style(){
 }
 
 function js(){
-    return gulp.src('./src/js/**/*.js')
+    return gulp.src(jsPath)
+    .pipe(sourcemaps.init())
+    .pipe(concat('all.js'))
+    .pipe(terser())
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./build/js'))
     .pipe(browserSync.stream());
 }
