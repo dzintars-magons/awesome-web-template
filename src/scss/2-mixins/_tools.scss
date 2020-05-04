@@ -1,0 +1,36 @@
+@mixin flex-center {
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+@mixin background-cover ($url) {
+    background: url($url) no-repeat center;
+    background-size: cover;
+}
+
+@mixin absolute-positioning ($top, $right) {
+    position: absolute;
+    top: $top;
+    right: $right;
+}
+
+@mixin z-index-5 {
+    z-index: 555;
+}
+
+@mixin z-index-4 {
+    z-index: 444;
+}
+
+@mixin z-index-3 {
+    z-index: 333;
+}
+
+@mixin z-index-2 {
+    z-index: 222;
+}
+
+@mixin z-index-1 {
+    z-index: 111;
+}
