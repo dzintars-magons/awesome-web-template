@@ -1,3 +1,26 @@
+@mixin m-x ($size) {
+    margin-right: $size;
+    margin-left: $size;
+}
+
+@mixin p-x ($size) {
+    padding-right: $size;
+    padding-left: $size;
+}
+
+@mixin navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+}
+
 @mixin flex-center {
     display: flex; 
     align-items: center; 
@@ -33,4 +56,9 @@
 
 @mixin z-index-1 {
     z-index: 111;
+}
+
+@mixin img-responsive {
+    max-width: 100%;
+    height: auto;
 }

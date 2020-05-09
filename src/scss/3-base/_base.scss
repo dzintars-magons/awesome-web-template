@@ -11,6 +11,98 @@
       margin: 0; 
       padding: 0;
   }
-  [class$="button"], [class$="btn"] {
-      display: inline-block;
+
+  p, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1.6rem;
   }
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+    line-height: 1.2;
+  } 
+  
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  button, [type="button"] {
+      display: inline-block;
+      color: inherit;
+      line-height: 1.5;
+      font-size: 2rem;
+      padding: 0.5em 1.5em;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 0.5em;
+      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+      &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+      }
+      &:hover {
+        color: black;
+      }
+  }
+
+
+  hr {
+    margin: 1.6rem 0;
+  }
+  
+
+  ol, ul {
+    padding-left: 3rem;
+    margin-bottom: 1.6rem;
+    padding-top: 1.6rem;
+  }
+
+  ol li, ul li {
+    font-size: 1.6rem;
+  }
+
+  a {
+    font-size: 1.6rem;
+    margin-bottom: 1.6rem;
+    color: #0d6efd;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #024dbc;
+  }
+
+  img {
+    vertical-align: middle;
+  }
+
+  input, select {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  button:not(:disabled),
+  [type="button"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  [type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
