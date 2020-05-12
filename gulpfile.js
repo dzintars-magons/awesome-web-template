@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create();
 const sourcemaps = require('gulp-sourcemaps');
 const concat = require('gulp-concat');
 const terser = require('gulp-terser');
+const autoprefix = require('gulp-autoprefixer');
 const {parallel} = require('gulp');
 
 const jsPath = './src/js/**/*.js';
@@ -30,6 +31,7 @@ function style(){
     })
     .on('error', sass.logError))
     .pipe(sourcemaps.write())
+    .pipe(autoprefix('last 4 versions'))
     .pipe(gulp.dest('./build/css')) 
     .pipe(browserSync.stream());
 }
