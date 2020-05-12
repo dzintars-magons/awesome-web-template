@@ -1,3 +1,28 @@
+//MIXIN that converts pixels to rems
+
+$font-size-base: 16 !default;
+
+// Strip units
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+// Relative units from pixels
+$mixin--baseFontSize: $font-size-base;
+
+@function rem($pixels, $context: $mixin--baseFontSize) {
+  $u-pixels: strip-unit($pixels);
+  $u-context: strip-unit($context);
+  
+  @return $u-pixels / $u-context * 1rem;
+}
+
+// ------------------------------------------
+
 @mixin m-x ($size) {
     margin-right: $size;
     margin-left: $size;
