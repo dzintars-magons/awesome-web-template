@@ -1,29 +1,88 @@
-@mixin desktop-small {
-    @media (max-width: #{$desktop-small}) {
+//DESKTOP FIRST MEDIA QUERIES
+
+//till 1200px
+@mixin desktop-down {
+    @media (max-width: #{$desktop}) {
         @content; 
    }
 }
-
-@mixin tablet {
+//till 992px
+@mixin tablet-down {
     @media (max-width: #{$tablet}) {
         @content; 
    }
 }
-
-@mixin mobile {
+//till 768px
+@mixin mobile-down {
     @media (max-width: #{$mobile}) {
         @content; 
    }
 }
-
-@mixin mq ($size) {
+//till whatever you choose
+@mixin max-width ($size) {
     @media (max-width: $size) {
         @content; 
     }
 }
-
-@mixin mq-height ($size) {
+//maybe you need a media query for height of the viewport
+@mixin max-height ($size) {
     @media (max-height: $size) {
+        @content; 
+    }
+}
+
+//MOBILE FIRST MEDIA QUERIES
+
+//mobile and up
+//768px and up 
+@mixin mobile-up {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+//tablet up
+//992px and up 
+@mixin tablet-up {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+//1200px and up
+@mixin desktop-up {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+//from whatever size you choose
+
+@mixin min-width ($size) {
+    @media (min-width: $size) {
+        @content; 
+    }
+}
+
+//MEDIA QUERIES WITHIN A SPECIFIC RANGE like MOBILE or TABLET range only
+
+//till 768px only
+@mixin mobile-only {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+//only tablet
+//from 768px till 992px
+@mixin tablet-only {
+    @media (min-width: #{$mobile}) and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+//only specific range of your choosing 
+@mixin range ($min, $max) {
+    @media (min-width: $min) and (max-width: $max) {
         @content; 
     }
 }

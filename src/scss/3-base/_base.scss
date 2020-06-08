@@ -9,6 +9,11 @@
       padding: 0;
   }
 
+  body {
+    overflow-x: hidden;
+    background-color: $primary-bg;
+  }
+
   p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.6rem;
   }
@@ -47,6 +52,7 @@
       line-height: 1.5;
       font-size: 2rem;
       padding: 0.5em 1.5em;
+      margin: 1em;
       text-decoration: none;
       border: 1px solid transparent;
       border-radius: 0.5em;
@@ -56,7 +62,8 @@
         box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
       }
       &:hover {
-        color: black;
+        color: white;
+        background: #000;
       }
   }
 
