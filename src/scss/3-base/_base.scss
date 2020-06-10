@@ -1,5 +1,11 @@
   html {
     box-sizing: border-box;
+    min-height: 100%;
+    width: 100%;
+
+    :focus {
+      outline: 0 !important;
+    }
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -12,37 +18,21 @@
   body {
     overflow-x: hidden;
     background-color: $primary-bg;
+    font-family: $font-family;
   }
 
   p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1.6rem;
+    font-family: $font-family;
   }
   h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    line-height: 1.2;
+    line-height: $line-height;
   } 
   
-  h1 {
-    font-size: 5rem;
-  }
-  h2 {
-    font-size: 4rem;
-  }
-  h3 {
-    font-size: 3rem;
-  }
-  h4 {
-    font-size: 2.5rem;
-  }
-  h5 {
-    font-size: 2rem;
-  }
-  h6 {
-    font-size: 1.8rem;
-  }
   p {
-    font-size: 1.6rem;
-    line-height: 1.5;
+    font-size: $p;
+    line-height: $line-height;
     text-align: center;
   }
 
@@ -86,8 +76,9 @@
   a {
     font-size: 1.6rem;
     margin-bottom: 1.6rem;
-    color: #0d6efd;
+    color: inherit;
     text-decoration: underline;
+    cursor: pointer;
   }
 
   a:hover {

@@ -13,6 +13,12 @@
    }
 }
 //till 768px
+@mixin landscape-down {
+    @media (max-width: #{$landscape}) {
+        @content; 
+   }
+}
+//till 576px
 @mixin mobile-down {
     @media (max-width: #{$mobile}) {
         @content; 
@@ -33,14 +39,20 @@
 
 //MOBILE FIRST MEDIA QUERIES
 
-//mobile and up
-//768px and up 
+//mobile up
+//576px and up 
 @mixin mobile-up {
     @media (min-width: #{$mobile}) {
         @content;
     }
 }
-
+//landscape up 
+//768px and up 
+@mixin landscape-up {
+    @media (min-width: #{$landscape}) {
+        @content;
+    }
+}
 //tablet up
 //992px and up 
 @mixin tablet-up {
@@ -66,20 +78,34 @@
 
 //MEDIA QUERIES WITHIN A SPECIFIC RANGE like MOBILE or TABLET range only
 
-//till 768px only
+//mobile only
+//till 576px only
 @mixin mobile-only {
     @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+//landscape-phones' size only
+//577px - 768px
+@mixin landscape-only {
+    @media (min-width: #{$mobile}) and (max-width: #{$landscape}) {
         @content;
     }
 }
 //only tablet
 //from 768px till 992px
 @mixin tablet-only {
-    @media (min-width: #{$mobile}) and (max-width: #{$tablet}) {
+    @media (min-width: #{$landscape}) and (max-width: #{$tablet}) {
         @content;
     }
 }
-
+//only desktop
+//from 992px
+@mixin desktop-only {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
 //only specific range of your choosing 
 @mixin range ($min, $max) {
     @media (min-width: $min) and (max-width: $max) {

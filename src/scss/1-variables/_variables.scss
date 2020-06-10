@@ -1,10 +1,34 @@
-$main-font: 'Roboto', sans-serif;
+//Typography
+
+$font-family: 'Roboto', sans-serif;
 $primary-bg: hotpink; 
 $secondary-bg: gold;
 $primary-color: #010100;
+
+$h1: rem(36);
+$h2: rem(27);
+$h3: rem(20);
+$h4: rem(16);
+$h5: rem(16);
+$h6: rem(16);
+$p: rem(16);
+
+$line-height: 1.2;
+
+$regular:   400;
+$medium:    500;
+$semi-bold: 600;
+$bold:      700;
+
+//Responsiveness
 
 $max-container-width: 1140px;
 
 $desktop: 1200px;
 $tablet: 992px; 
-$mobile: 768px; 
+$landscape: 768px;
+$mobile: 576px; 
+
+//Extra
+
+$popup-box-shadow: 2px 0px 25px rgba(#9A9EA6, .6);

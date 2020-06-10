@@ -1,31 +1,8 @@
-//MIXIN that converts pixels to rems
-
-$font-size-base: 16 !default;
-
-// Strip units
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
-  }
-
-  @return $number;
-}
-
-// Relative units from pixels
-$mixin--baseFontSize: $font-size-base;
-
-@function rem($pixels, $context: $mixin--baseFontSize) {
-  $u-pixels: strip-unit($pixels);
-  $u-context: strip-unit($context);
-  
-  @return $u-pixels / $u-context * 1rem;
-}
-
-// ------------------------------------------
+//CONTAINER SIZE , MARGINS AND PADDING
 
 @mixin max-container-width {
     max-width: $max-container-width;
-    margin: 0 auto;
+    @include margin-x (auto);
 }
 
 @mixin margin-x ($size) {
@@ -38,18 +15,7 @@ $mixin--baseFontSize: $font-size-base;
     padding-left: $size;
 }
 
-@mixin navigation {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    margin-bottom: 0;
-    list-style: none;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-decoration: none;
-}
+//MIXINS FOR FLEXBOX
 
 @mixin flex-center {
     display: flex; 
@@ -57,16 +23,21 @@ $mixin--baseFontSize: $font-size-base;
     justify-content: center;
 }
 
-@mixin background-cover ($url) {
-    background: url($url) no-repeat center;
-    background-size: cover;
+@mixin space-around {
+    display: flex;
+    justify-content: space-around;
 }
 
-@mixin absolute-positioning ($top, $right) {
-    position: absolute;
-    top: $top;
-    right: $right;
+@mixin space-between {
+    display: flex;
+    justify-content: space-between;
 }
+
+@mixin column-reverse {
+    flex-direction: column-reverse;
+}
+
+//Z-INDEXES 
 
 @mixin z-index-5 {
     z-index: 555;
@@ -88,7 +59,55 @@ $mixin--baseFontSize: $font-size-base;
     z-index: 111;
 }
 
+//MIXINS FOR IMAGES AND BACKGROUND IMAGES
+
 @mixin img-responsive {
     max-width: 100%;
     height: auto;
 }
+
+@mixin background-cover ($url) {
+    background: url($url) no-repeat center;
+    background-size: cover;
+}
+
+@mixin background-image ($url) {
+    background-image: url($url);
+}
+
+@mixin contain {
+    background-size: contain;
+}
+
+@mixin no-repeat {
+    background-repeat: no-repeat;
+}
+
+//OTHER MIXINS
+
+@mixin absolute-position {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+@mixin navigation {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 0;
+    list-style: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+@mixin uppercase {
+    text-transform: uppercase;
+}
+
+
+
+
