@@ -3,6 +3,7 @@
 @mixin max-container-width {
     max-width: $max-container-width;
     @include margin-x (auto);
+    @include padding-x ($container-padding-x);
 }
 
 @mixin margin-x ($size) {

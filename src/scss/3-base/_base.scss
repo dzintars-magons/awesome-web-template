@@ -2,10 +2,6 @@
     box-sizing: border-box;
     min-height: 100%;
     width: 100%;
-
-    :focus {
-      outline: 0 !important;
-    }
   }
   *, *:before, *:after {
     box-sizing: inherit;
