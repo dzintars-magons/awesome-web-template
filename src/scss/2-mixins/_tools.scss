@@ -11,9 +11,19 @@
     margin-left: $size;
 }
 
+@mixin margin-y ($top, $bottom) {
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
 @mixin padding-x ($size) {
     padding-right: $size;
     padding-left: $size;
+}
+
+@mixin padding-y ($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
 }
 
 //MIXINS FOR FLEXBOX
@@ -32,6 +42,11 @@
 @mixin space-between {
     display: flex;
     justify-content: space-between;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
 }
 
 @mixin column-reverse {

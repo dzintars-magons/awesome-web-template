@@ -36,8 +36,8 @@
       display: inline-block;
       color: inherit;
       line-height: 1.5;
-      font-size: 2rem;
-      padding: 0.5em 1.5em;
+      font-size: $button-font-size;
+      padding: $button-padding;
       margin: 1em;
       text-decoration: none;
       border: 1px solid transparent;
