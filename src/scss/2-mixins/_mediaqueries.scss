@@ -13,8 +13,8 @@
    }
 }
 //till 768px
-@mixin landscape-down {
-    @media (max-width: #{$landscape}) {
+@mixin phablet-down {
+    @media (max-width: #{$phablet}) {
         @content; 
    }
 }
@@ -46,10 +46,10 @@
         @content;
     }
 }
-//landscape up 
+//phablet up 
 //768px and up 
-@mixin landscape-up {
-    @media (min-width: #{$landscape}) {
+@mixin phablet-up {
+    @media (min-width: #{$phablet}) {
         @content;
     }
 }
@@ -85,17 +85,17 @@
         @content;
     }
 }
-//landscape-phones' size only
+//phablet-phones' size only
 //577px - 768px
-@mixin landscape-only {
-    @media (min-width: #{$mobile}) and (max-width: #{$landscape}) {
+@mixin phablet-only {
+    @media (min-width: #{$mobile}) and (max-width: #{$phablet}) {
         @content;
     }
 }
 //only tablet
 //from 768px till 992px
 @mixin tablet-only {
-    @media (min-width: #{$landscape}) and (max-width: #{$tablet}) {
+    @media (min-width: #{$phablet}) and (max-width: #{$tablet}) {
         @content;
     }
 }

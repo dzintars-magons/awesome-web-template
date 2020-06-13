@@ -1,1 +1,84 @@
 //HOMEPAGE SCSS
+
+.container {
+   
+    @include padding-y (4rem, 8rem);
+    background-color: $secondary-bg;
+    @include max-container-width;
+
+    @include mobile-down {
+        background-color: indigo;
+    }
+
+    @include tablet-only {
+        background-color: teal;
+    }
+
+    @include desktop-up {
+        background-color: firebrick;
+    }
+
+    @include range (1400px, 1600px) {
+        background-color: green;
+    }
+}
+
+h1 {
+    font-size: $h1;
+}
+
+h2 {
+    font-size: $h2;
+}
+
+.btn-group {
+    @include flex-center;
+    @include tablet-down {
+        flex-direction: column;
+    }
+
+    button {
+        @include mobile-down {
+            --button-font-size: 0.5rem;
+        }
+    }
+}
+
+.section-1 {
+    display: flex;
+    @include mobile-down {
+        flex-direction: column;
+    }
+}
+
+.card-1, .card-2, .card-3 {
+
+   @include flex-column;
+   width: 33.333%;
+   @include padding-x (0.5rem);
+   @include mobile-down {
+       width: auto;
+   }
+
+   img, p {
+       @include mobile-down {
+            @include margin-x (auto); 
+       }
+   }
+
+    img {
+        display: block;
+        @include img-responsive;
+       
+        margin-bottom: 2.5rem;
+    }
+
+    p {
+        @include mobile-down {
+            width: 200px;
+        }
+       
+    }
+}
+
+
