@@ -37,9 +37,16 @@ h2 {
         flex-direction: column;
     }
 
+
     button {
         @include mobile-down {
-            --button-font-size: 0.5rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    @include tablet-down {
+        button:last-child {
+            margin-bottom: 8rem;
         }
     }
 }
