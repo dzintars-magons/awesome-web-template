@@ -1,7 +1,8 @@
 //HOMEPAGE SCSS
 
-.container {
+.main-container {
    
+    min-height: 100vh;
     @include padding-y (4rem, 8rem);
     background-color: $secondary-bg;
     @include max-container-width;
@@ -31,61 +32,26 @@ h2 {
     font-size: $h2;
 }
 
-.btn-group {
-    @include flex-center;
-    @include tablet-down {
-        flex-direction: column;
-    }
 
-
-    button {
-        @include mobile-down {
-            font-size: 1.5rem;
-        }
-    }
-
-    @include tablet-down {
-        button:last-child {
-            margin-bottom: 8rem;
-        }
-    }
-}
-
-.section-1 {
-    display: flex;
-    @include mobile-down {
-        flex-direction: column;
-    }
-}
 
 .card-1, .card-2, .card-3 {
 
-   @include flex-column;
-   width: 33.333%;
-   @include padding-x (0.5rem);
-   @include mobile-down {
-       width: auto;
-   }
-
-   img, p {
-       @include mobile-down {
-            @include margin-x (auto); 
-       }
-   }
+   
 
     img {
         display: block;
+        @include margin-x (auto);
+        
         @include img-responsive;
        
         margin-bottom: 2.5rem;
     }
 
     p {
-        @include mobile-down {
-            width: 200px;
-        }
-       
+        width: 200px;
+        @include margin-x (auto);
     }
+  
 }
 
 
