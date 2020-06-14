@@ -1,26 +1,26 @@
 //DESKTOP FIRST MEDIA QUERIES
 
-//till 1200px
+//till 1199px
 @mixin desktop-down {
-    @media (max-width: #{$desktop}) {
+    @media (max-width: #{$desktop-end}) {
         @content; 
    }
 }
-//till 992px
+//till 991px
 @mixin tablet-down {
-    @media (max-width: #{$tablet}) {
+    @media (max-width: #{$tablet-end}) {
         @content; 
    }
 }
-//till 768px
+//till 767px
 @mixin phablet-down {
-    @media (max-width: #{$phablet}) {
+    @media (max-width: #{$phablet-end}) {
         @content; 
    }
 }
-//till 576px
+//till 575px
 @mixin mobile-down {
-    @media (max-width: #{$mobile}) {
+    @media (max-width: #{$mobile-end}) {
         @content; 
    }
 }
@@ -39,31 +39,24 @@
 
 //MOBILE FIRST MEDIA QUERIES
 
-//mobile up
-//576px and up 
-@mixin mobile-up {
-    @media (min-width: #{$mobile}) {
-        @content;
-    }
-}
 //phablet up 
-//768px and up 
+//576px and up 
 @mixin phablet-up {
-    @media (min-width: #{$phablet}) {
+    @media (min-width: #{$phablet-start}) {
         @content;
     }
 }
 //tablet up
-//992px and up 
+//768px and up 
 @mixin tablet-up {
-    @media (min-width: #{$tablet}) {
+    @media (min-width: #{$tablet-start}) {
         @content;
     }
 }
 
-//1200px and up
+//992px and up
 @mixin desktop-up {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: #{$desktop-start}) {
         @content;
     }
 }
@@ -81,28 +74,28 @@
 //mobile only
 //till 576px only
 @mixin mobile-only {
-    @media (max-width: #{$mobile}) {
+    @media (max-width: #{$mobile-end}) {
         @content;
     }
 }
 //phablet-phones' size only
 //577px - 768px
 @mixin phablet-only {
-    @media (min-width: #{$mobile}) and (max-width: #{$phablet}) {
+    @media (min-width: #{$phablet-start}) and (max-width: #{$phablet-end}) {
         @content;
     }
 }
 //only tablet
 //from 768px till 992px
 @mixin tablet-only {
-    @media (min-width: #{$phablet}) and (max-width: #{$tablet}) {
+    @media (min-width: #{$tablet-start}) and (max-width: #{$tablet-end}) {
         @content;
     }
 }
 //only desktop
 //from 992px
 @mixin desktop-only {
-    @media (min-width: #{$desktop}) {
+    @media (min-width: #{$desktop-start}) {
         @content;
     }
 }

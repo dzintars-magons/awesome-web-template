@@ -26,6 +26,10 @@
 
 h1 {
     font-size: $h1;
+
+    @include desktop-only {
+        color: hotpink;
+    }
 }
 
 h2 {

@@ -33,10 +33,17 @@ $bold:      700;
 $max-container-width: 1140px;
 $container-padding-x: 1rem;
 
-$desktop: 1200px;
-$tablet: 992px; 
-$phablet: 768px;
-$mobile: 576px; 
+$mobile-end: 575px; 
+$phablet-start: 576px;
+$phablet-end: 767px;
+$tablet-start: 768px;
+$tablet-end: 991px;
+$desktop-start: 992px;
+$desktop-end: 1199px;
+$large-desktop-start: 1200px;
+
+
+
 
 //Buttons
 
