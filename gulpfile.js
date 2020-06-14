@@ -6,6 +6,7 @@ const concat = require('gulp-concat');
 const terser = require('gulp-terser');
 const autoprefix = require('gulp-autoprefixer');
 const {parallel} = require('gulp');
+const {series} = require('gulp');
 
 const jsPath = './src/js/**/*.js';
 const scssPath = './src/scss/**/*.scss';
@@ -64,4 +65,4 @@ exports.style = style;
 
 
 exports.build = parallel(copyHtml, copyImages, style, js);
-exports.watch = watch; 
+exports.watch = series(copyHtml, copyImages, style, js, watch); 
