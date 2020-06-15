@@ -16,6 +16,14 @@
     margin-bottom: $bottom;
 }
 
+@mixin mb-primary {
+    margin-bottom: $margin-bottom-primary;
+}
+
+@mixin mb-secondary {
+    margin-bottom: $margin-bottom-secondary;
+}
+
 @mixin padding-x ($size) {
     padding-right: $size;
     padding-left: $size;
@@ -73,6 +81,10 @@
 
 @mixin z-index-1 {
     z-index: 111;
+}
+
+@mixin z-index-minus-1 {
+    z-index: -1;
 }
 
 //MIXINS FOR IMAGES AND BACKGROUND IMAGES

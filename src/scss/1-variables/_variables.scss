@@ -28,7 +28,11 @@ $medium:    500;
 $semi-bold: 600;
 $bold:      700;
 
-//Responsive
+/*
+    =========
+    Responsive
+    =========
+*/
 
 $max-container-width: 1140px;
 $container-padding-x: 1rem;
@@ -47,12 +51,22 @@ $desktop-end: 1199px;
 $large-desktop-start: 1200px;
 
 
-
+/*
+    =========
+    Other
+    =========
+*/
 
 //Buttons
 
 $button-font-size: 2rem;
 $button-padding: 0.5em 1.5em;
+
+//Spacing 
+
+$margin-bottom-primary: 1.6rem; //used in base as default for paragraphs and all headings
+$margin-bottom-secondary: 1.2rem;
+$margin-bottom-tertiary: 1rem;
 
 //Extra
 

@@ -40,11 +40,12 @@ h2 {
 
 .card-1, .card-2, .card-3 {
 
-   
+   @include flex-column;
+   align-items: center;
 
     img {
-        display: block;
-        @include margin-x (auto);
+        // display: block;
+        // @include margin-x (auto);
         
         @include img-responsive;
        
@@ -53,7 +54,7 @@ h2 {
 
     p {
         width: 200px;
-        @include margin-x (auto);
+        // @include margin-x (auto);
     }
   
 }
