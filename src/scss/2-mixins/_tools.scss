@@ -1,9 +1,22 @@
 //CONTAINER SIZE , MARGINS AND PADDING
 
-@mixin max-container-width {
+@mixin container {
+    width: 100%;
     max-width: $max-container-width;
     @include margin-x (auto);
     @include padding-x ($container-padding-x);
+    @include phablet-up {
+        max-width: 540px;
+    }
+    @include tablet-up {
+        max-width: 720px;
+    }
+    @include desktop-up {
+        max-width: 960px;
+    }
+    @include large-desktop-up {
+        max-width: $max-container-width;
+    }
 }
 
 @mixin margin-x ($size) {

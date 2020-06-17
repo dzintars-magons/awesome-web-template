@@ -61,6 +61,12 @@
     }
 }
 
+@mixin large-desktop-up {
+    @media (min-width: #{$large-desktop-start}) {
+        @content;
+    }
+}
+
 //from whatever size you choose
 
 @mixin min-width ($size) {

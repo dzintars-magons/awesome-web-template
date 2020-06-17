@@ -1,62 +1,30 @@
 //HOMEPAGE SCSS
 
-.main-container {
-   
-    min-height: 100vh;
-    @include padding-y (4rem, 8rem);
+/*
+    =========
+    MAIN
+    =========
+*/
+
+.wrapper {
+    @include container;
+}
+
+.intro {
+
     background-color: $secondary-bg;
-    @include max-container-width;
+    min-height: 100vh;
 
-    @include mobile-down {
-        background-color: indigo;
+    :first-child {
+        padding-top: 30px;
     }
 
-    @include tablet-only {
-        background-color: teal;
-    }
-
-    @include desktop-up {
-        background-color: firebrick;
-    }
-
-    @include range (1400px, 1600px) {
-        background-color: green;
-    }
-}
-
-h1 {
-    font-size: $h1;
-
-    @include desktop-only {
-        color: hotpink;
-    }
-}
-
-h2 {
-    font-size: $h2;
-}
-
-
-
-.card-1, .card-2, .card-3 {
-
-   @include flex-column;
-   align-items: center;
-
-    img {
-        // display: block;
-        // @include margin-x (auto);
+    &__heading-first {
+        font-size: $h1;
         
-        @include img-responsive;
-       
-        margin-bottom: 2.5rem;
     }
 
-    p {
-        width: 200px;
-        // @include margin-x (auto);
+    &__heading-second {
+        font-size: $h2;
     }
-  
 }
-
-
