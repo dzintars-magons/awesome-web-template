@@ -2,9 +2,8 @@
 
 @mixin container {
     width: 100%;
-    max-width: $max-container-width;
     @include margin-x (auto);
-    @include padding-x ($container-padding-x);
+    @include padding-x (15px);
     @include phablet-up {
         max-width: 540px;
     }
@@ -15,8 +14,14 @@
         max-width: 960px;
     }
     @include large-desktop-up {
-        max-width: $max-container-width;
+        max-width: 1140px;
     }
+}
+
+@mixin container-fluid {
+    width: 100%;
+    @include margin-x (auto);
+    @include padding-x (15px);
 }
 
 @mixin margin-x ($size) {
