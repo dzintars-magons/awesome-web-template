@@ -8,27 +8,26 @@
   }
   *{
       margin: 0; 
-      padding: 0;
   }
 
   body {
     overflow-x: hidden;
     background-color: $primary-bg;
+    color: $primary-font-color;
     font-family: $font-family;
+    font-weight: $regular;
+    line-height: $line-height;
   }
 
   p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: $margin-bottom-primary;
-    font-family: $font-family;
   }
   h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    line-height: $line-height;
   } 
   
   p {
     font-size: $p;
-    line-height: $line-height;
     text-align: center;
   }
 
@@ -106,6 +105,7 @@
 
   img {
     vertical-align: middle;
+    border-style: none;
   }
 
   input, select {
