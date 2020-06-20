@@ -47,9 +47,9 @@
     padding-left: $size;
 }
 
-@mixin padding-y ($top, $bottom) {
-    padding-top: $top;
-    padding-bottom: $bottom;
+@mixin padding-y ($size) {
+    padding-top: $size;
+    padding-bottom: $size;
 }
 
 //MIXINS FOR FLEXBOX
@@ -141,12 +141,12 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-direction: row;
     margin-bottom: 0;
     list-style: none;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    @include padding-y (.5rem);
+    @include padding-x (1rem);
     text-decoration: none;
 }
 

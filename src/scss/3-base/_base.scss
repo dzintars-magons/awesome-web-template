@@ -41,10 +41,11 @@
   button, [type="button"] {
       display: inline-block;
       color: inherit;
+      background-color: $button-color;
       line-height: 1.5;
       font-size: $button-font-size;
       padding: $button-padding;
-      margin: 1em;
+      margin: $button-margin;
       text-decoration: none;
       text-align: center;
       border: 1px solid transparent;
@@ -66,9 +67,9 @@
         opacity: 0.65;
       }
       @media (prefers-reduced-motion: reduce) {
-        .btn {
+        
           transition: none;
-        }
+        
       }
   }
 
@@ -95,12 +96,11 @@
     font-size: 1.6rem;
     margin-bottom: 1.6rem;
     color: inherit;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
-  }
-
-  a:hover {
-    color: #024dbc;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   img {
