@@ -94,7 +94,8 @@ function copySourceJs(){
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
 exports.style = style;
-
+//copies source scss and js to build/srcfiles folder
+exports.copySource = parallel (copySourceStyle, copySourceJs);
 
 exports.build = parallel(copyHtml, copyImages, style, js);
 exports.buildWithSourceFiles = parallel(copyHtml, copyImages, copySourceStyle, copySourceJs, style, js);
