@@ -81,11 +81,22 @@ function watch(){
     gulp.watch('./src/img/**/*', copyImages).on('change', browserSync.reload);
 }
 
+//In case you want to copy source files to build folder
+
+function copySourceStyle(){
+    return gulp.src('src/scss/**/*').pipe(gulp.dest('build/srcfiles/scss'));
+}
+
+function copySourceJs(){
+    return gulp.src('src/js/**/*').pipe(gulp.dest('build/srcfiles/js'));
+}
+
 exports.copyHtml = copyHtml;
 exports.copyImages = copyImages;
 exports.style = style;
 
 
 exports.build = parallel(copyHtml, copyImages, style, js);
+exports.buildWithSourceFiles = parallel(copyHtml, copyImages, copySourceStyle, copySourceJs, style, js);
 exports.buildDev = parallel(copyHtml, copyImages, styleDev, jsDev);
 exports.watch = series(copyHtml, copyImages, styleDev, jsDev, watch); 
