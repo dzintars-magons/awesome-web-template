@@ -87,4 +87,5 @@ exports.style = style;
 
 
 exports.build = parallel(copyHtml, copyImages, style, js);
+exports.buildDev = parallel(copyHtml, copyImages, styleDev, jsDev);
 exports.watch = series(copyHtml, copyImages, styleDev, jsDev, watch); 
