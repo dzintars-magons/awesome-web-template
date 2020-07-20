@@ -129,6 +129,48 @@
     background-repeat: no-repeat;
 }
 
+/*
+    =========
+    Aspect Ratio Boxes
+    =========
+*/
+
+//Aspect Ratio Box v1  
+
+@mixin aspect-ratio-box {
+    height: 0;
+    padding-top: $aspect-ratio-box-height / $aspect-ratio-box-width * 100%;
+}
+
+//Aspect Ratio Box v2
+//putting content inside an aspect ratio box
+//Elements should be nested in this order. 
+
+@mixin aspect-ratio-box-container {
+    height: 0;
+    overflow: hidden;
+    padding-top: $aspect-ratio-box-height / $aspect-ratio-box-width * 100%;
+    background: white;
+    position: relative;
+}
+
+@mixin aspect-ration-box-container-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin aspect-ratio-box-inner-flex {
+    height: 100%;
+    @include flex-center;
+}
+
+@mixin aspect-ratio-box-text {
+    font-size: $aspect-ratio-box-text; 
+}
+
 //OTHER MIXINS
 
 @mixin absolute-position {
@@ -153,7 +195,3 @@
 @mixin uppercase {
     text-transform: uppercase;
 }
-
-
-
-
