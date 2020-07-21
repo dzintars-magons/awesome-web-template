@@ -4,7 +4,7 @@
 * npm
 ### DEVELOPMENT
 * Click "use this template" 
-* npm init 
+* npm install 
 ```
 downloads node_modules listed in package.json file
 ```
