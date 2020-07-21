@@ -150,11 +150,11 @@
     height: 0;
     overflow: hidden;
     padding-top: $aspect-ratio-box-height / $aspect-ratio-box-width * 100%;
-    background: white;
+    background: $primary-bg;
     position: relative;
 }
 
-@mixin aspect-ration-box-container-inner {
+@mixin aspect-ratio-box-container-inner {
     position: absolute;
     top: 0;
     left: 0;
