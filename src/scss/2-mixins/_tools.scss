@@ -162,7 +162,7 @@
     height: 100%;
 }
 
-@mixin aspect-ratio-box-inner-flex {
+@mixin aspect-ratio-box-container-inner-flex {
     height: 100%;
     @include flex-center;
 }
