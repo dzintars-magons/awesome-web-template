@@ -100,4 +100,4 @@ exports.copySource = parallel (copySourceStyle, copySourceJs);
 exports.build = parallel(copyHtml, copyImages, style, js);
 exports.buildWithSourceFiles = parallel(copyHtml, copyImages, copySourceStyle, copySourceJs, style, js);
 exports.buildDev = parallel(copyHtml, copyImages, styleDev, jsDev);
-exports.watch = series(copyHtml, copyImages, styleDev, jsDev, watch); 
+exports.default= series(copyHtml, copyImages, styleDev, jsDev, watch); 
