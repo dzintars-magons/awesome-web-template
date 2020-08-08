@@ -92,12 +92,16 @@
 
   ol, ul {
     padding-left: 3rem;
-    margin-bottom: 1.6rem;
+    padding-bottom: 1.6rem;
     padding-top: 1.6rem;
   }
 
   ol li, ul li {
     font-size: 1.6rem;
+  }
+
+  ol li:not(:last-child), ul li:not(:last-child) {
+    padding-right: 1rem;
   }
 
   a {
