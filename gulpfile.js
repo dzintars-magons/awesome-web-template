@@ -9,7 +9,7 @@ const {parallel} = require('gulp');
 const {series} = require('gulp');
 
 const jsPath = './src/js/**/*.js';
-const scssPath = './src/scss/**/*.scss';
+const scssPath = './src/scss/main.scss';
 
 function copyHtml(){
     return gulp.src('src/*.html').pipe(gulp.dest('build'));
