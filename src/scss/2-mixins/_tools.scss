@@ -145,15 +145,6 @@
     height: auto;
 }
 
-@mixin background-cover ($url) {
-    background: url($url) no-repeat center;
-    background-size: cover;
-}
-
-@mixin background-image ($url) {
-    background-image: url($url);
-}
-
 @mixin contain {
     background-size: contain;
 }
