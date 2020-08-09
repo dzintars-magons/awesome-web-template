@@ -63,15 +63,15 @@
 }
 
 @mixin pt-primary {
-    margin-top: $padding-top-primary;
+    padding-top: $padding-top-primary;
 }
 
 @mixin pt-secondary {
-    margin-top: $padding-top-secondary;
+    padding-top: $padding-top-secondary;
 }
 
 @mixin pt-tertiary {
-    margin-top: $padding-top-tertiary;
+    padding-top: $padding-top-tertiary;
 }
 
 /*
