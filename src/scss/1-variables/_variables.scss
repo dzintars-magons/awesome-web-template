@@ -69,9 +69,9 @@ $margin-bottom-primary: 1.6rem; //used in base as default for paragraphs and all
 $margin-bottom-secondary: 1.2rem;
 $margin-bottom-tertiary: 1rem;
 
-$margin-top-primary: $margin-bottom-primary;
-$margin-top-secondary: $margin-bottom-secondary;
-$margin-top-tertiary: $margin-bottom-tertiary;
+$padding-top-primary: $margin-bottom-primary;
+$padding-top-secondary: $margin-bottom-secondary;
+$padding-top-tertiary: $margin-bottom-tertiary;
 
 //Extra
 $popup-box-shadow: 2px 0px 25px rgba(#9A9EA6, .6);
