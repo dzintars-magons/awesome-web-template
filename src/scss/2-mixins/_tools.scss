@@ -1,4 +1,8 @@
-//CONTAINER SIZE , MARGINS AND PADDING
+/*
+    ==============
+    CONTAINER SIZE
+    ==============
+                    */
 
 @mixin container {
     width: 100%;
@@ -23,6 +27,12 @@
     @include margin-x (auto);
     @include padding-x (15px);
 }
+
+/*
+    ============
+    MARGINS AND PADDING
+    ============
+                    */
 
 @mixin margin-x ($size) {
     margin-right: $size;
@@ -52,7 +62,23 @@
     padding-bottom: $size;
 }
 
-//MIXINS FOR FLEXBOX
+@mixin pt-primary {
+    margin-top: $padding-top-primary;
+}
+
+@mixin pt-secondary {
+    margin-top: $padding-top-secondary;
+}
+
+@mixin pt-tertiary {
+    margin-top: $padding-top-tertiary;
+}
+
+/*
+    ==================
+    MIXINS FOR FLEXBOX
+    ==================
+                        */
 
 @mixin flex-center {
     display: flex; 
@@ -79,7 +105,11 @@
     flex-direction: column-reverse;
 }
 
-//Z-INDEXES 
+/*
+    ==========
+    Z-INDEXES
+    ==========
+                */ 
 
 @mixin z-index-5 {
     z-index: 555;
@@ -105,8 +135,11 @@
     z-index: -1;
 }
 
-//MIXINS FOR IMAGES AND BACKGROUND IMAGES
-
+/*
+    ====================================
+    MIXINS FOR IMAGES AND BACKGROUND IMAGES
+    ====================================
+                                            */
 @mixin img-responsive {
     max-width: 100%;
     height: auto;
@@ -131,7 +164,7 @@
 
 /*
     =========
-    Aspect Ratio Boxes
+    ASPECT RATIO BOXES
     =========
 */
 
@@ -171,7 +204,11 @@
     font-size: $aspect-ratio-box-text; 
 }
 
-//OTHER MIXINS
+/*
+    =============
+    OTHER MIXINS
+    =============
+                    */
 
 @mixin absolute-position {
     position: absolute;
