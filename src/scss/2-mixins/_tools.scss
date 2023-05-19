@@ -5,9 +5,10 @@
                     */
 
 @mixin container {
+    --gutter-x: 1.5rem;
     width: 100%;
     @include margin-x (auto);
-    @include padding-x (15px);
+    @include padding-x (calc(var(--gutter-x) * .5));
     @include phablet-up {
         max-width: 540px;
     }
@@ -23,9 +24,10 @@
 }
 
 @mixin container-fluid {
+    --gutter-x: 1.5rem;
     width: 100%;
     @include margin-x (auto);
-    @include padding-x (15px);
+    @include padding-x (calc(var(--gutter-x) * .5));
 }
 
 /*
